@@ -16,3 +16,4 @@ console.log(person2.printValor());
 console.log(person3.printValor());
 console.log(person4.printValor());
 console.log(person5.printValor());
+console.log(person1.isEqual(person2));

@@ -89,9 +89,23 @@ export class Platform
         this.color = v;
     }
     
-    
-    
-    
+    public isEqual(plataforma:Platform):boolean
+    {
+        if(this.name == plataforma.name && this.releaseYear == plataforma.releaseYear && this.company == plataforma.company && this.nBits == plataforma.nBits && this.generation == plataforma.generation && this.hasHD == plataforma.hasHD && this.hdSize == plataforma.hdSize && this.hasInternetConnetion == plataforma.hasInternetConnetion && this.storageDevice == plataforma.storageDevice)
+        {
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public printValor()
+    {
+        return this.name+" "+this.releaseYear+" "+this.company+" "+this.nBits+" "+this.generation+" "+this.hasHD+" "+this.hdSize+" "+this.hasInternetConnetion+" "+this.storageDevice;
+    }
+    public printAll():string
+    {
+        return "Name : "+this.name+"\nYear release: "+this.releaseYear+"\nCompany: "+this.company+"\nBits number: "+this.nBits+"\nGeneration: "+this.generation+"\nHd: "+this.hasHD+"\nHd size: "+this.hdSize+"\nInternet Connection: "+this.hasInternetConnetion+"\nStorage Device: "+this.storageDevice+"\nColor: "+this.color;
+    }    
 }
     
     

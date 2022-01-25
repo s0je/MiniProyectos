@@ -10,10 +10,7 @@ export class Person
     {
         this.name = name;
         this.nationality = nationality;
-        if(profession === "developer" || profession === "tester" || profession === "manager" || profession === "director")
-        {
-            this.profession = profession;
-        }
+        this.profession = profession;
         this.experienceYears =experienceYears;
     }
     //Metodos Setter & Getter
@@ -44,11 +41,13 @@ export class Person
     public setexperienceTears(v : number) {
         this.experienceYears = v;
     }
-    public isPerson(person:Person):boolean
+    public isEqual(persona:Person):boolean
     {
-        if(person === person)
+        if(this.name == persona.name && this.nationality == persona.nationality && this.profession == persona.profession && this.experienceYears == persona.experienceYears)
         {
-            return true
+            return true;
+        } else{
+            return false;
         }
     }
     public printValor()
